@@ -1,0 +1,9 @@
+﻿@model MovieRater.Models.Root
+
+@for(int i = 0; i < Model.results.Count; ++i)
+{
+    <div>
+        @Html.DisplayFor(item => Model.results[i].title)
+        @Html.ActionLink("Details", "Details", "Home", new { title = Model.results[i].title })
+    </div>
+}
